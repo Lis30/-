@@ -1,0 +1,17 @@
+place = input()
+stroka = '87654321'.index(place[1])
+stolb = 'abcdefgh'.index(place[0])
+matrix = [["."]*8 for _ in range(8)]
+
+#Конь попадет на клетку, если:
+#Разница координат по оси х == 1, разница координат по оси y == 2 или
+#Разница координат по оси х == 2, разница координат по оси y == 1
+for stroka2 in range(8):
+    for stolb2 in range(8):
+        if (abs(stolb-stolb2)==1 and abs(stroka-stroka2)==2) or (abs(stolb-stolb2)==2 and abs(stroka-stroka2)==1):
+            matrix[stroka2][stolb2] = "*"
+
+matrix[stroka][stolb] = "N"
+
+for elem in matrix:
+    print(*elem, end = "\n")
