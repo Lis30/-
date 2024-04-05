@@ -14,4 +14,4 @@ for stroka2 in range(8):
 matrix[stroka][stolb] = "N"
 
 for elem in matrix:
-    print(*elem, end = "\n")
+    print(*elem)
